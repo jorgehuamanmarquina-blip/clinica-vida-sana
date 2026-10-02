@@ -1,0 +1,31 @@
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  font-family:var(--font-body);
+  color:var(--charcoal);
+  background:var(--paper);
+  line-height:1.55;
+}
+h1,h2,h3{ font-family:var(--font-display); color:var(--ink); line-height:1.15; }
+
+/* Evita que el header fijo (sticky) tape el inicio de la sección al saltar
+   con un ancla (#preguntas, #doctores, etc.) o al volver desde otra página. */
+section[id]{ scroll-margin-top:96px; }
+img{ max-width:100%; display:block; }
+button{ font-family:inherit; }
+
+.skip-link{
+  position:absolute; left:-999px; top:0; background:var(--ink); color:var(--white);
+  padding:12px 18px; z-index:5000; border-radius:0 0 8px 0;
+}
+.skip-link:focus{ left:0; }
+
+:focus-visible{ outline:3px solid var(--accent); outline-offset:2px; }
+
+/* ============ SECTION HEAD (compartido) ============ */
+.section-head{ max-width:640px; margin:0 auto 40px; text-align:left; }
+.section-sintomas .section-head, .section-doctores .section-head, .section-faq .section-head{
+  max-width:1160px; padding:0 5%; margin-left:auto; margin-right:auto;
+}
+.section-head h2{ font-size:clamp(1.7rem, 3vw, 2.15rem); margin-bottom:10px; }
+.subtitle{ color:var(--muted); font-size:0.98rem; }

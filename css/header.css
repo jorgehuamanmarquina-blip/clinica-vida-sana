@@ -1,0 +1,87 @@
+.main-header{
+  background:var(--white);
+  border-bottom:1px solid var(--line);
+  position:sticky; top:0; z-index:1000;
+}
+.header-top{
+  max-width:1360px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 5%; gap:16px;
+}
+.logo{
+  font-family:var(--font-display);
+  font-size:1.25rem; font-weight:600;
+  color:var(--ink); text-decoration:none;
+  display:flex; align-items:center; gap:8px;
+}
+.logo-mark{ color:var(--ink); display:flex; }
+
+.nav-links{ display:flex; gap:clamp(14px, 1.8vw, 26px); align-items:center; flex-wrap:nowrap; }
+.nav-links a{
+  text-decoration:none; color:var(--charcoal); font-weight:500; font-size:0.92rem;
+  white-space:nowrap;
+}
+.nav-links a:hover{ color:var(--accent-dark); }
+
+.menu-desplegable-trigger{ position:relative; }
+.menu-link{
+  background:none; border:none; cursor:pointer; font-size:0.92rem; font-weight:500;
+  color:var(--charcoal); display:flex; align-items:center; gap:4px; padding:4px 0;
+  white-space:nowrap;
+}
+.menu-link:hover{ color:var(--accent-dark); }
+.chev{ font-size:0.7rem; transition:transform .2s; }
+.menu-desplegable-trigger.is-open .chev{ transform:rotate(180deg); }
+
+/* Sin espacio entre el botón y el panel (top:100%, sin +14px de por medio):
+   un hueco vacío ahí hace que el mouse lo "atraviese" sin hover activo y el
+   panel se cierre solo, dando la sensación de que hay que mantener el clic.
+   El "aire" visual respecto al botón lo da el padding-top interno, no un
+   hueco fuera de la caja. */
+.dropdown-panel-hover{
+  display:none; position:absolute; top:100%; left:-40px; margin-top:2px;
+  background:var(--white); width:480px;
+  box-shadow:var(--shadow); border-radius:var(--radius-m);
+  border:1px solid var(--line);
+  padding:18px; grid-template-columns:200px 1fr; gap:18px;
+}
+.menu-desplegable-trigger.is-open .dropdown-panel-hover{ display:grid; }
+@media (hover:hover){
+  .menu-desplegable-trigger:hover .dropdown-panel-hover{ display:grid; }
+}
+
+.menu-items-list{ display:flex; flex-direction:column; gap:3px; border-right:1px solid var(--line); padding-right:14px; }
+.sub-item{
+  display:flex; align-items:center; gap:10px; background:none; border:none;
+  padding:10px 10px; font-size:0.88rem; color:var(--charcoal); font-weight:500;
+  border-radius:var(--radius-s); cursor:pointer; text-align:left; width:100%;
+}
+.sub-item:hover, .sub-item.is-active{ background:var(--sky-light); color:var(--ink); }
+.sub-icon{ color:var(--accent-dark); width:18px; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+.sub-icon svg{ width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+
+.submenu-display-panel{ display:flex; flex-direction:column; gap:10px; }
+.panel-image{ border-radius:var(--radius-s); overflow:hidden; height:120px; background:var(--paper-alt); }
+.panel-image img{ width:100%; height:100%; object-fit:cover; object-position:center 28%; }
+.panel-text h3{ font-size:1.05rem; margin-bottom:4px; }
+.panel-text p{ font-size:0.85rem; color:var(--muted); margin-bottom:10px; }
+.panel-ir{ background:none; border:none; color:var(--accent-dark); font-weight:700; font-size:0.85rem; cursor:pointer; padding:0; }
+.panel-ir:hover{ text-decoration:underline; }
+
+.header-actions{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
+.btn-perfil-mini{
+  width:38px; height:38px; border-radius:50%; border:1px solid var(--line); background:var(--white);
+  color:var(--ink); display:flex; align-items:center; justify-content:center; cursor:pointer;
+}
+.btn-perfil-mini:hover{ border-color:var(--accent); color:var(--accent-dark); }
+.btn-agendar-cita{
+  background:var(--accent); color:var(--white); border:none;
+  padding:10px 20px; border-radius:30px; font-weight:600; font-size:0.9rem; cursor:pointer;
+}
+.btn-agendar-cita:hover{ background:var(--accent-dark); }
+
+.hamburger{
+  display:none; flex-direction:column; justify-content:center; gap:5px;
+  width:34px; height:34px; background:none; border:none; cursor:pointer;
+}
+.hamburger span{ display:block; height:2px; width:100%; background:var(--ink); border-radius:2px; }

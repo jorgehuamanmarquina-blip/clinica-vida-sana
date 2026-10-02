@@ -1,0 +1,17 @@
+.section-testimonios{ background:var(--paper-alt); padding:70px 5%; }
+.testimonios-grid{
+  max-width:1160px; margin:0 auto; display:grid;
+  grid-template-columns:repeat(3,1fr); gap:22px;
+}
+.testimonio-card{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius-m);
+  padding:26px 24px; box-shadow:var(--shadow);
+}
+.testimonio-estrellas{ color:#F5A623; font-size:1.05rem; letter-spacing:2px; margin-bottom:12px; }
+.testimonio-texto{ color:var(--charcoal); font-size:0.96rem; line-height:1.6; margin-bottom:18px; }
+.testimonio-autor{ font-weight:700; color:var(--ink); font-size:0.92rem; display:flex; flex-direction:column; gap:2px; }
+.testimonio-autor span{ font-weight:500; color:var(--muted); font-size:0.82rem; }
+
+@media (max-width:860px){
+  .testimonios-grid{ grid-template-columns:1fr; }
+}

@@ -1,0 +1,50 @@
+.section-doctores{ padding:80px 0; background:var(--paper-alt); }
+.doctores-toolbar{
+  max-width:1160px; margin:0 auto 10px; padding:0 5%;
+  display:flex; flex-wrap:wrap; gap:18px; align-items:center; justify-content:space-between;
+}
+.search-box{
+  display:flex; align-items:center; gap:10px; background:var(--white);
+  border:1px solid var(--line); border-radius:30px; padding:10px 16px; min-width:260px; flex:1 1 260px;
+}
+.search-box svg{ color:var(--muted); flex-shrink:0; }
+.search-box input{ border:none; outline:none; background:none; width:100%; font-size:0.92rem; font-family:inherit; }
+
+.chips{ display:flex; gap:8px; flex-wrap:wrap; }
+.chip{
+  background:var(--white); border:1px solid var(--line); color:var(--charcoal);
+  padding:8px 14px; border-radius:20px; font-size:0.82rem; font-weight:600; cursor:pointer;
+}
+.chip:hover{ border-color:var(--accent); }
+.chip.is-active{ background:var(--ink); border-color:var(--ink); color:var(--white); }
+
+.no-results{ max-width:1160px; margin:20px auto; padding:0 5%; color:var(--muted); }
+
+.descripcion-especialidad{
+  max-width:1160px; margin:18px auto 0; padding:14px 5%;
+  color:var(--ink-soft); font-size:0.92rem; background:var(--sky-light);
+  border-left:3px solid var(--accent); border-radius:0 var(--radius-s) var(--radius-s) 0;
+}
+
+.grid-10-doctores{
+  max-width:1160px; margin:32px auto 0; padding:0 5%;
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  justify-content:start; gap:22px;
+}
+.doc-card{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius-m);
+  overflow:hidden; cursor:pointer; text-align:left; transition:box-shadow .25s, transform .25s;
+  width:100%; max-width:300px;
+}
+.doc-card:hover{ box-shadow:var(--shadow); transform:translateY(-4px); }
+/* Relación de aspecto fija (no una altura fija en px): así la foto nunca se ve
+   "estirada" ni gigante, sin importar cuántas tarjetas caben en la fila. */
+.doc-card img{ width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center 18%; background:var(--paper-alt); }
+.doc-info{ padding:16px; }
+.especialidad-tag{
+  display:inline-block; background:var(--sky-light); color:var(--ink);
+  padding:4px 10px; border-radius:20px; font-size:0.72rem; font-weight:700; margin-bottom:8px;
+}
+.doc-info h3{ font-size:1.02rem; margin-bottom:3px; }
+.cmp{ font-size:0.8rem; color:var(--muted); margin-bottom:8px; }
+.click-info{ font-size:0.78rem; color:var(--accent-dark); font-weight:600; }

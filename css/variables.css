@@ -1,0 +1,19 @@
+:root{
+  --ink:#0C3B66;
+  --ink-soft:#155189;
+  --paper:#FFFFFF;
+  --paper-alt:#EEF6FC;
+  --accent:#2E9BE0;
+  --accent-dark:#1C7DBD;
+  --sky:#8FCBEF;
+  --sky-light:#E6F4FC;
+  --charcoal:#1B2B38;
+  --muted:#5B7186;
+  --line:#D7E6F0;
+  --white:#FFFFFF;
+  --radius-s:6px;
+  --radius-m:14px;
+  --shadow:0 10px 30px rgba(12,59,102,0.12);
+  --font-display:'Poppins', 'Inter', -apple-system, Segoe UI, sans-serif;
+  --font-body:'Inter', -apple-system, Segoe UI, sans-serif;
+}

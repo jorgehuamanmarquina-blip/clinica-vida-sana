@@ -1,0 +1,33 @@
+/* El menú se vuelve hamburguesa antes (1180px en vez de 860px): con 6
+   enlaces + el botón "Agendar cita" ya no entran cómodos en pantallas
+   medianas (laptops de 13"-14"), y se veían apretados o cortados en dos
+   líneas. */
+@media (max-width:1180px){
+  .hamburger{ display:flex; }
+  .nav-links{
+    position:fixed; top:68px; left:0; right:0; background:var(--white);
+    flex-direction:column; align-items:stretch; gap:0; padding:10px 5% 20px;
+    border-bottom:1px solid var(--line); box-shadow:var(--shadow);
+    transform:translateY(-8px); opacity:0; pointer-events:none; transition:all .2s;
+    max-height:80vh; overflow-y:auto;
+  }
+  .nav-links.is-open{ transform:translateY(0); opacity:1; pointer-events:auto; }
+  .nav-links a, .menu-link{ padding:14px 4px; border-bottom:1px solid var(--line); width:100%; justify-content:space-between; white-space:normal; }
+  .dropdown-panel-hover{ position:static; width:100%; grid-template-columns:1fr; box-shadow:none; border:none; padding:10px 0; }
+  .header-actions .btn-agendar-cita{ display:none; }
+}
+
+@media (max-width:860px){
+  .hero-stats{ grid-template-columns:repeat(2,1fr); }
+  .field-row{ grid-template-columns:1fr; }
+  .footer-grid{ grid-template-columns:1fr; gap:26px; }
+  .perfil-body{ grid-template-columns:1fr; gap:22px; padding:22px 18px; }
+  .perfil-header, .perfil-footer{ padding-left:18px; padding-right:18px; }
+  .perfil-foto{ width:130px; height:130px; }
+  .slot-dia{ width:100%; }
+  .calendario-popover{ width:100%; left:0; right:0; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ scroll-behavior:auto !important; transition:none !important; }
+}

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Vida Sana — Medicina de confianza, cuidado humano</title>
+<meta name="description" content="Clínica Vida Sana: especialistas de confianza, emergencias 24 horas y atención integral para toda la familia. Agenda tu cita en minutos.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🩺</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Hoja de estilos dividida por componente (arquitectura limpia: cada
+     archivo cubre una sola sección/bloque del sitio, en el orden en que
+     aparecen en la página). -->
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/sintomas.css">
+<link rel="stylesheet" href="css/doctores.css">
+<link rel="stylesheet" href="css/faq.css">
+<link rel="stylesheet" href="css/testimonios.css">
+<link rel="stylesheet" href="css/whatsapp-flotante.css">
+<link rel="stylesheet" href="css/modales.css">
+<link rel="stylesheet" href="css/calendario.css">
+<link rel="stylesheet" href="css/perfil-medico.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+
+<!-- HEADER -->
+<header class="main-header">
+  <div class="header-top">
+    <a href="#inicio" class="logo">
+      <span class="logo-mark">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="currentColor"/><path d="M12 6.5v11M6.5 12h11" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/></svg>
+      </span>
+      Clínica Vida Sana
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="nosotros.html">Nosotros</a>
+      <a href="#sintomas">¿Qué te pasa?</a>
+
+      <div class="menu-desplegable-trigger" id="serviciosMenu">
+        <button class="menu-link" id="serviciosBtn" aria-expanded="false" aria-controls="dropdownPanel">
+          Servicios <span class="chev">▾</span>
+        </button>
+
+        <div class="dropdown-panel-hover" id="dropdownPanel" role="menu">
+          <div class="menu-items-list">
+            <button class="sub-item is-active" data-key="salud" role="menuitem">
+              <span class="sub-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span><span>Salud general</span>
+            </button>
+            <button class="sub-item" data-key="cardiologia" role="menuitem">
+              <span class="sub-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.4a4.2 4.2 0 0 1 7.5 2.4C19.5 15.4 12 20 12 20z"/></svg></span><span>Cardiología</span>
+            </button>
+            <button class="sub-item" data-key="mujer" role="menuitem">
+              <span class="sub-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4.5"/><path d="M12 13.5V21M9 18h6"/></svg></span><span>Unidad Mujer</span>
+            </button>
+            <button class="sub-item" data-key="pediatria" role="menuitem">
+              <span class="sub-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9 15.2c.9.9 1.9 1.3 3 1.3s2.1-.4 3-1.3"/><circle cx="9.3" cy="10.3" r=".6" fill="currentColor"/><circle cx="14.7" cy="10.3" r=".6" fill="currentColor"/></svg></span><span>Pediatría</span>
+            </button>
+            <button class="sub-item" data-key="emergencias" role="menuitem">
+              <span class="sub-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 2.8 19.5h18.4L12 3.5z"/><path d="M12 10v4.5M12 17.2v.01"/></svg></span><span>Emergencias 24h</span>
+            </button>
+          </div>
+
+          <div class="submenu-display-panel">
+            <div class="panel-image">
+              <img id="panelImg" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=500&q=80" alt="">
+            </div>
+            <div class="panel-text">
+              <h3 id="panelTitulo">Salud general</h3>
+              <p id="panelDesc">Chequeos preventivos y control de salud para toda la familia, con tecnología de punta.</p>
+              <button type="button" class="panel-ir" id="panelIrBtn">Ver especialistas →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#doctores">Staff médico</a>
+      <a href="#preguntas">Preguntas frecuentes</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn-perfil-mini" id="btnMiPerfil" type="button" title="Mis datos de contacto">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>
+      </button>
+      <button class="btn-agendar-cita" data-open-modal>Agendar cita</button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-kicker">Medicina de confianza desde 2009</p>
+        <h1>Que la salud de tu familia<br>no espere turno.</h1>
+        <p class="hero-lead">Especialistas de confianza, una sola clínica. Cuéntanos qué sientes y te llevamos con quien puede ayudarte hoy mismo.</p>
+        <div class="hero-actions">
+          <button class="btn-principal" data-open-modal>Reservar consulta</button>
+          <a href="#sintomas" class="btn-secundario">¿Qué síntoma tienes? ↓</a>
+        </div>
+      </div>
+
+      <dl class="hero-stats">
+        <div><dt>15+</dt><dd>años de trayectoria</dd></div>
+        <div><dt data-total-doctores>7</dt><dd>especialistas propios</dd></div>
+        <div><dt>24/7</dt><dd>emergencias abiertas</dd></div>
+        <div><dt>48 200</dt><dd>pacientes atendidos</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- BUSCADOR DE SÍNTOMAS -->
+  <section id="sintomas" class="section-sintomas">
+    <div class="section-head">
+      <h2>¿Qué condición o síntoma presenta hoy?</h2>
+      <p class="subtitle">Toca el que más se parezca a lo que sientes: se resalta y te mostramos, al instante, qué especialista es el indicado.</p>
+    </div>
+
+    <div class="sintomas-grid" id="sintomasGrid">
+      <!-- generado por JS -->
+    </div>
+
+    <p class="sintoma-seleccion-resumen" id="sintomaResumen" aria-live="polite" hidden></p>
+  </section>
+
+  <!-- STAFF MÉDICO -->
+  <section id="doctores" class="section-doctores">
+    <div class="section-head">
+      <h2>Nuestro staff de <span data-total-doctores>7</span> especialistas</h2>
+      <p class="subtitle">Filtra por especialidad o busca por nombre. Haz clic en cualquier médico para ver su perfil completo.</p>
+    </div>
+
+    <div class="doctores-toolbar">
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="buscarDoctor" placeholder="Buscar por nombre o especialidad…" aria-label="Buscar médico">
+      </div>
+      <div class="chips" id="chipsEspecialidad" role="group" aria-label="Filtrar por especialidad">
+        <button class="chip is-active" data-filter="todos">Todos</button>
+      </div>
+    </div>
+
+    <p class="no-results" id="noResults" hidden>No encontramos especialistas con ese criterio. Prueba con otro nombre o especialidad.</p>
+
+    <p class="descripcion-especialidad" id="descripcionEspecialidad" hidden></p>
+
+    <div class="grid-10-doctores" id="gridDoctores">
+      <!-- generado por JS -->
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="section-testimonios">
+    <div class="section-head">
+      <h2>Lo que dicen nuestros pacientes</h2>
+      <p class="subtitle">Historias reales de familias que confiaron en nosotros.</p>
+    </div>
+    <div class="testimonios-grid" id="testimoniosGrid">
+      <!-- generado por JS -->
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES -->
+  <section id="preguntas" class="section-faq">
+    <div class="section-head">
+      <h2>Antes de venir, resolvamos tus dudas</h2>
+      <p class="subtitle">Lo que más nos preguntan los pacientes nuevos.</p>
+    </div>
+
+    <div class="faq-list" id="faqList">
+      <!-- generado por JS -->
+    </div>
+  </section>
+
+</main>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/51996818031?text=Hola%2C%20buen%20d%C3%ADa.%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.13c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.17-1.56-1.17-2.98 0-1.41.74-2.11 1-2.4.26-.28.57-.36.76-.36.19 0 .38 0 .55.01.17.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.37 1.47.29.15.46.13.63-.07.17-.21.72-.84.91-1.13.19-.29.38-.24.63-.14.26.1 1.64.77 1.92.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+  <span>Escríbenos</span>
+</a>
+
+<!-- MODAL PERFIL DEL MÉDICO -->
+<div id="modalDoc" class="modal" aria-hidden="true">
+  <div class="modal-content perfil-modal" role="dialog" aria-modal="true" aria-labelledby="perfilNombre">
+
+    <div class="perfil-header">
+      <h2 class="perfil-header-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        Perfil del médico
+      </h2>
+      <button class="close perfil-close" data-close-modal aria-label="Cerrar">&times;</button>
+    </div>
+
+    <div class="perfil-body">
+      <aside class="perfil-side">
+        <div class="perfil-foto"><img id="perfilImg" src="" alt=""></div>
+        <h3 id="perfilNombre"></h3>
+        <span class="especialidad-tag" id="perfilTag"></span>
+        <ul class="perfil-datos">
+          <li><strong id="perfilExp"></strong><span>años de experiencia</span></li>
+          <li><strong id="perfilCmp"></strong><span>colegiatura</span></li>
+        </ul>
+      </aside>
+
+      <div class="perfil-main">
+        <div class="perfil-tabs" role="tablist" aria-label="Información del médico">
+          <button role="tab" class="perfil-tab is-active" aria-selected="true" data-tab="sobre">Sobre el médico</button>
+          <button role="tab" class="perfil-tab" aria-selected="false" data-tab="formacion">Formación</button>
+          <button role="tab" class="perfil-tab" aria-selected="false" data-tab="disponibilidad">Disponibilidad</button>
+        </div>
+
+        <div class="tab-panel" data-panel="sobre" role="tabpanel">
+          <p id="perfilBio" class="perfil-bio"></p>
+          <p class="perfil-sub">Idiomas de atención</p>
+          <div class="perfil-tags" id="perfilIdiomas"></div>
+        </div>
+
+        <div class="tab-panel" data-panel="formacion" role="tabpanel" hidden>
+          <ul class="timeline" id="perfilFormacion"></ul>
+        </div>
+
+        <div class="tab-panel" data-panel="disponibilidad" role="tabpanel" hidden>
+          <p class="perfil-sub">Elige un horario referencial; ajustas la hora exacta al confirmar.</p>
+          <div class="slots" id="perfilSlots"></div>
+          <p class="slot-resumen" id="perfilSlotResumen" aria-live="polite"></p>
+        </div>
+
+        <section class="perfil-contacto">
+          <h4>Contacto</h4>
+          <div class="contacto-item">
+            <span class="contacto-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></span>
+            <a id="perfilEmail" href="#"></a>
+            <button type="button" class="btn-copiar" id="btnCopiarEmail">Copiar</button>
+          </div>
+          <div class="contacto-item">
+            <span class="contacto-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+            <a id="perfilTel" href="#"></a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="perfil-footer">
+      <button type="button" class="btn-cerrar" data-close-modal>× Cerrar</button>
+      <button type="button" class="btn-agendar-modal" id="btnAgendarDesdeDoc">Agendar cita</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: COMPLETAR PERFIL DEL PACIENTE (requisito previo para agendar) -->
+<div id="modalPerfilPaciente" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="perfilPacienteTitulo">
+    <button class="close" data-close-modal aria-label="Cerrar">&times;</button>
+    <h2 id="perfilPacienteTitulo">Antes de agendar, cuéntanos quién eres</h2>
+    <p class="modal-sub">Completa tus datos una sola vez. Los usaremos para todas tus próximas citas en este equipo.</p>
+
+    <form id="formPerfilPaciente" novalidate>
+      <div class="field">
+        <label for="perfilPNombre">Nombre y apellido</label>
+        <input type="text" id="perfilPNombre" required placeholder="Ej. Juan Pérez" autocomplete="name">
+        <span class="field-error" data-error-for="perfilPNombre"></span>
+      </div>
+      <div class="field">
+        <label for="perfilPTelefono">Teléfono móvil</label>
+        <input type="tel" id="perfilPTelefono" required placeholder="Ej. 987654321" pattern="[0-9]{9}" maxlength="9" inputmode="numeric" autocomplete="tel">
+        <span class="field-error" data-error-for="perfilPTelefono"></span>
+      </div>
+      <button type="submit" class="btn-enviar">Guardar y continuar</button>
+      <p class="perfil-nota">Estos datos se guardan solo en este navegador, no se envían a ningún servidor.</p>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL RESERVA DE CITA (se envía por WhatsApp) -->
+<div id="modalCita" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="citaTitulo">
+    <button class="close" data-close-modal aria-label="Cerrar">&times;</button>
+
+    <div id="citaFormWrap">
+      <h2 id="citaTitulo">Reserva tu cita médica</h2>
+      <p class="modal-sub">Completa los datos y te llevamos directo a WhatsApp con tu solicitud lista para enviar. <button type="button" class="link-editar-perfil" id="btnEditarPerfilDesdeCita">Editar mis datos</button></p>
+
+      <form id="formCita" novalidate>
+        <div class="field">
+          <label for="nombreCita">Nombre y apellido</label>
+          <input type="text" id="nombreCita" name="nombre" required placeholder="Ej. Juan Pérez" autocomplete="name">
+          <span class="field-error" data-error-for="nombreCita"></span>
+        </div>
+
+        <div class="field">
+          <label for="telefonoCita">Teléfono móvil</label>
+          <input type="tel" id="telefonoCita" name="telefono" required placeholder="Ej. 987654321" pattern="[0-9]{9}" maxlength="9" inputmode="numeric" autocomplete="tel">
+          <span class="field-error" data-error-for="telefonoCita"></span>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="especialidadCita">Especialidad</label>
+            <select id="especialidadCita" name="especialidad"></select>
+          </div>
+          <div class="field">
+            <label for="medicoCita">Médico</label>
+            <select id="medicoCita" name="medico"></select>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="fechaCitaTrigger">Fecha</label>
+            <div class="calendario-wrap">
+              <button type="button" class="fecha-trigger" id="fechaCitaTrigger" aria-haspopup="dialog" aria-expanded="false">
+                <span id="fechaCitaTexto">Elegir fecha</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+              </button>
+              <input type="hidden" id="fechaCita" name="fecha" required>
+              <div class="calendario-popover" id="calendarioPopover" hidden>
+                <div class="calendario-head">
+                  <button type="button" class="calendario-nav" id="calMesPrev" aria-label="Mes anterior">‹</button>
+                  <span id="calendarioMes"></span>
+                  <button type="button" class="calendario-nav" id="calMesNext" aria-label="Mes siguiente">›</button>
+                </div>
+                <div class="calendario-semana">
+                  <span>D</span><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span>
+                </div>
+                <div class="calendario-grid" id="calendarioGrid"></div>
+              </div>
+            </div>
+            <span class="field-error" data-error-for="fechaCita"></span>
+          </div>
+          <div class="field">
+            <label for="horaCita">Hora</label>
+            <select id="horaCita" name="hora" required></select>
+            <span class="field-error" data-error-for="horaCita"></span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-enviar btn-wa-submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.13c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.17-1.56-1.17-2.98 0-1.41.74-2.11 1-2.4.26-.28.57-.36.76-.36.19 0 .38 0 .55.01.17.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.37 1.47.29.15.46.13.63-.07.17-.21.72-.84.91-1.13.19-.29.38-.24.63-.14.26.1 1.64.77 1.92.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+          Enviar solicitud por WhatsApp
+        </button>
+      </form>
+    </div>
+
+    <div id="citaConfirmacion" class="cita-confirmacion" hidden>
+      <div class="check-badge">✓</div>
+      <h2>Te llevamos a WhatsApp…</h2>
+      <p id="confirmacionTexto">Si no se abrió solo, toca el botón verde.</p>
+      <a href="#" id="btnEnviarWhatsapp" class="btn-wa-perfil btn-wa-confirmacion" target="_blank" rel="noopener">
+        Abrir WhatsApp con mi solicitud
+      </a>
+      <button class="btn-agendar-cita btn-cita-cerrar" data-close-modal>Ya la envié, cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <p class="logo footer-logo">
+        <span class="logo-mark"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="currentColor"/><path d="M12 6.5v11M6.5 12h11" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/></svg></span>
+        Clínica Vida Sana
+      </p>
+      <p class="footer-text">Atención médica integral con calidez humana, todos los días del año.</p>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p class="footer-text">Av. La Salud 245, San Isidro</p>
+      <p class="footer-text">(01) 555-0134 · WhatsApp 996 818 031</p>
+      <p class="footer-text">contacto@vidasana.pe</p>
+    </div>
+    <div>
+      <h4>Horario</h4>
+      <p class="footer-text">Consulta externa: Lun–Sáb, 8:00–20:00</p>
+      <p class="footer-text">Emergencias: los 365 días, 24 horas</p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Clínica Vida Sana. Todos los derechos reservados.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
